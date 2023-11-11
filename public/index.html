@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EMDR Tool</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' />
+    <style>
+      .container {
+        width: 100% !important;
+      }
+      #stimulationCanvas {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+      <h1 class='text-center'>Simple Online EMDR Tool</h1>
+      <div class='row'>
+        <div class='col-md-12'>
+          <canvas id='stimulationCanvas' width='800' height='200'></canvas>
+        </div>
+      </div>
+      <div class='slidecontainer'>
+        <input type='range' min='1' max='100' value='5' class='slider' id='speedRange'>
+        <p>Speed: <span id='speedSliderValue'></span></p>
+      </div>
+    </div>
+    <script src='/js/index.js'></script>
+    <script>
+      var slider = document.getElementById('speedRange');
+      var output = document.getElementById('speedSliderValue');
+      output.innerHTML = slider.value;
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>
+  </body>
+</html>

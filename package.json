@@ -1,0 +1,13 @@
+{
+  "name": "simple_online_EMDR_",
+  "version": "1.0.0",
+  "description": "Simple online EMDR tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^8.0.0"
+  }
+}
